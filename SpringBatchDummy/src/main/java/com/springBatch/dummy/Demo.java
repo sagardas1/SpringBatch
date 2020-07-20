@@ -30,6 +30,9 @@ public class Demo {
 		serviceLayer.delete(details);
 		return null;
 	}
-	
+	@GetMapping(value="/{title}",headers="Accept=application/json")
+	public String getTitle(@PathVariable String title) {
+		return title;
+	}
 
 }
