@@ -7,14 +7,15 @@ import org.springframework.stereotype.Service;
 public class ServiceLayer {
 	@Autowired
 	private UserInterface userInterface;
-	
-	
+
 	public void insertData(UserDetails details) {
 		userInterface.save(details);
-		
+
 	}
-	
-	
-	
+
+	public void delete(UserDetails details) {
+		userInterface.delete(details);
+
+	}
 
 }

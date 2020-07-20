@@ -1,6 +1,7 @@
 package com.springBatch.dummy;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,5 +24,12 @@ public class Demo {
 		serviceLayer.insertData(details);
 		return null;
 	}
+	
+	@DeleteMapping(value="/delete",headers="Accept=application/json")
+	public String delete(@RequestBody UserDetails details) {
+		serviceLayer.delete(details);
+		return null;
+	}
+	
 
 }
