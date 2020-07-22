@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,5 +35,12 @@ public class Demo {
 	public String getTitle(@PathVariable String title) {
 		return title;
 	}
+	
+	@PutMapping(value="/{name}",headers="Accept=application/json")
+	public String updatename(@PathVariable String name) {
+		return name;
+	}
+	
+	
 
 }
